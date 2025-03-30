@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Minha Aplicação Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Página Inicial!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <!-- Links para Login e Registro, agora estão em um único menu de navegação -->
+            <li><a href="/login">Login</a></li>
+            <li><a href="/registro">Registro</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Informações sobre a aplicação</h2>
+        <p>Esta é a página inicial da minha aplicação Flask. Estamos criando um visual simples, mas eficaz!</p>
+    </section>
+</body>
+</html>
