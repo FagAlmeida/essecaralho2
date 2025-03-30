@@ -21,7 +21,7 @@ def inicio():
     return render_template('inicio.html')
 
 # Página de login
-@app.route('/login', methods=['GET', 'POST'])  # Corrigido: adicionado @
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -40,7 +40,7 @@ def login():
 
             if check_password_hash(user.get('password', ''), password):
                 flash("Login bem-sucedido", 'success')
-                return redirect(url_for('inicio'))
+                return redirect(url_for('inicio'))  # Redireciona para a página de início
             else:
                 flash("Usuário ou senha inválidos", 'error')
                 return render_template('login.html')
